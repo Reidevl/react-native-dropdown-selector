@@ -1,5 +1,7 @@
 # rn-dropdown-select
 
+[![npm version](https://img.shields.io/npm/v/rn-dropdown-select?logo=npm)](https://www.npmjs.com/package/rn-dropdown-select)
+
 A lightweight, customizable dropdown selector component for React Native built with pure React Native components - no external UI library dependencies required.
 
 ## Features
@@ -25,14 +27,14 @@ pnpm add rn-dropdown-select
 ## Basic Usage
 
 ```tsx
-import React, { useState } from 'react';
-import { View } from 'react-native';
-import { DropdownSelector, DropdownOption } from 'rn-dropdown-select';
+import React, { useState } from "react";
+import { View } from "react-native";
+import { DropdownSelector, DropdownOption } from "rn-dropdown-select";
 
 const options: DropdownOption[] = [
-  { value: '1', label: 'Option 1' },
-  { value: '2', label: 'Option 2' },
-  { value: '3', label: 'Option 3' },
+  { value: "1", label: "Option 1" },
+  { value: "2", label: "Option 2" },
+  { value: "3", label: "Option 3" },
 ];
 
 export default function App() {
@@ -55,13 +57,13 @@ export default function App() {
 ## Usage with React Hook Form
 
 ```tsx
-import React from 'react';
-import { useForm, Controller } from 'react-hook-form';
-import { DropdownSelector, DropdownOption } from 'rn-dropdown-select';
+import React from "react";
+import { useForm, Controller } from "react-hook-form";
+import { DropdownSelector, DropdownOption } from "rn-dropdown-select";
 
 const options: DropdownOption[] = [
-  { value: '1', label: 'Option 1' },
-  { value: '2', label: 'Option 2' },
+  { value: "1", label: "Option 1" },
+  { value: "2", label: "Option 2" },
 ];
 
 interface FormData {
@@ -94,24 +96,24 @@ export default function FormExample() {
 
 ### DropdownSelector
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `value` | `string \| undefined` | - | Selected value |
-| `onValueChange` | `(value: string) => void` | - | Callback when value changes |
-| `options` | `readonly DropdownOption[]` | - | Array of options |
-| `label` | `string \| undefined` | - | Label text (shown above input in outlined mode) |
-| `placeholder` | `string` | `"Seleccionar..."` | Placeholder text |
-| `error` | `boolean` | `false` | Show error state |
-| `errorMessage` | `string \| undefined` | - | Error message text |
-| `disabled` | `boolean` | `false` | Disable the selector |
-| `mode` | `"outlined" \| "flat"` | `"flat"` | Input style mode |
-| `theme` | `DropdownTheme \| undefined` | - | Custom theme object |
-| `style` | `ViewStyle \| undefined` | - | Container style |
-| `inputStyle` | `ViewStyle \| undefined` | - | Input container style |
-| `textStyle` | `TextStyle \| undefined` | - | Text input style |
-| `labelStyle` | `TextStyle \| undefined` | - | Label text style |
-| `errorStyle` | `TextStyle \| undefined` | - | Error message style |
-| `iconComponent` | `React.ReactNode \| undefined` | - | Custom icon component |
+| Prop            | Type                           | Default            | Description                                     |
+| --------------- | ------------------------------ | ------------------ | ----------------------------------------------- |
+| `value`         | `string \| undefined`          | -                  | Selected value                                  |
+| `onValueChange` | `(value: string) => void`      | -                  | Callback when value changes                     |
+| `options`       | `readonly DropdownOption[]`    | -                  | Array of options                                |
+| `label`         | `string \| undefined`          | -                  | Label text (shown above input in outlined mode) |
+| `placeholder`   | `string`                       | `"Seleccionar..."` | Placeholder text                                |
+| `error`         | `boolean`                      | `false`            | Show error state                                |
+| `errorMessage`  | `string \| undefined`          | -                  | Error message text                              |
+| `disabled`      | `boolean`                      | `false`            | Disable the selector                            |
+| `mode`          | `"outlined" \| "flat"`         | `"flat"`           | Input style mode                                |
+| `theme`         | `DropdownTheme \| undefined`   | -                  | Custom theme object                             |
+| `style`         | `ViewStyle \| undefined`       | -                  | Container style                                 |
+| `inputStyle`    | `ViewStyle \| undefined`       | -                  | Input container style                           |
+| `textStyle`     | `TextStyle \| undefined`       | -                  | Text input style                                |
+| `labelStyle`    | `TextStyle \| undefined`       | -                  | Label text style                                |
+| `errorStyle`    | `TextStyle \| undefined`       | -                  | Error message style                             |
+| `iconComponent` | `React.ReactNode \| undefined` | -                  | Custom icon component                           |
 
 ### DropdownOption
 
@@ -127,38 +129,38 @@ interface DropdownOption {
 The component includes built-in light and dark themes. You can customize the theme by passing a `theme` prop:
 
 ```tsx
-import { DropdownSelector, DropdownTheme } from 'rn-dropdown-select';
+import { DropdownSelector, DropdownTheme } from "rn-dropdown-select";
 
 const customTheme: DropdownTheme = {
   colors: {
-    background: '#ffffff',
-    backgroundSelected: '#f0f0f0',
-    text: '#000000',
-    textSelected: '#000000',
-    textDisabled: '#999999',
-    border: '#cccccc',
-    borderFocused: '#007AFF',
-    borderError: '#ff0000',
-    errorText: '#ff0000',
-    placeholder: '#999999',
-    shadow: '#000000',
-    icon: '#666666',
-    iconDisabled: '#cccccc',
+    background: "#ffffff",
+    backgroundSelected: "#f0f0f0",
+    text: "#000000",
+    textSelected: "#000000",
+    textDisabled: "#999999",
+    border: "#cccccc",
+    borderFocused: "#007AFF",
+    borderError: "#ff0000",
+    errorText: "#ff0000",
+    placeholder: "#999999",
+    shadow: "#000000",
+    icon: "#666666",
+    iconDisabled: "#cccccc",
   },
 };
 
 <DropdownSelector
   theme={customTheme}
   // ... other props
-/>
+/>;
 ```
 
 Or use the `useDropdownTheme` hook:
 
 ```tsx
-import { useDropdownTheme } from 'rn-dropdown-select';
+import { useDropdownTheme } from "rn-dropdown-select";
 
-const theme = useDropdownTheme({ mode: 'dark' });
+const theme = useDropdownTheme({ mode: "dark" });
 ```
 
 ## Advanced Usage
@@ -166,12 +168,12 @@ const theme = useDropdownTheme({ mode: 'dark' });
 ### Custom Icon
 
 ```tsx
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons } from "@expo/vector-icons";
 
 <DropdownSelector
   iconComponent={<Ionicons name="chevron-down" size={20} color="#666" />}
   // ... other props
-/>
+/>;
 ```
 
 ### Accessing Sub-components
@@ -179,7 +181,7 @@ import { Ionicons } from '@expo/vector-icons';
 For advanced use cases, you can use the sub-components directly:
 
 ```tsx
-import { OptionsList, SelectorItem } from 'rn-dropdown-select';
+import { OptionsList, SelectorItem } from "rn-dropdown-select";
 ```
 
 ## Requirements
