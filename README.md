@@ -1,4 +1,4 @@
-# react-native-dropdown-selector
+# rn-dropdown-select
 
 A lightweight, customizable dropdown selector component for React Native built with pure React Native components - no external UI library dependencies required.
 
@@ -15,11 +15,11 @@ A lightweight, customizable dropdown selector component for React Native built w
 ## Installation
 
 ```bash
-npm install react-native-dropdown-selector
+npm install rn-dropdown-select
 # or
-yarn add react-native-dropdown-selector
+yarn add rn-dropdown-select
 # or
-pnpm add react-native-dropdown-selector
+pnpm add rn-dropdown-select
 ```
 
 ## Basic Usage
@@ -27,7 +27,7 @@ pnpm add react-native-dropdown-selector
 ```tsx
 import React, { useState } from 'react';
 import { View } from 'react-native';
-import { DropdownSelector, DropdownOption } from 'react-native-dropdown-selector';
+import { DropdownSelector, DropdownOption } from 'rn-dropdown-select';
 
 const options: DropdownOption[] = [
   { value: '1', label: 'Option 1' },
@@ -57,7 +57,7 @@ export default function App() {
 ```tsx
 import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
-import { DropdownSelector, DropdownOption } from 'react-native-dropdown-selector';
+import { DropdownSelector, DropdownOption } from 'rn-dropdown-select';
 
 const options: DropdownOption[] = [
   { value: '1', label: 'Option 1' },
@@ -127,7 +127,7 @@ interface DropdownOption {
 The component includes built-in light and dark themes. You can customize the theme by passing a `theme` prop:
 
 ```tsx
-import { DropdownSelector, DropdownTheme } from 'react-native-dropdown-selector';
+import { DropdownSelector, DropdownTheme } from 'rn-dropdown-select';
 
 const customTheme: DropdownTheme = {
   colors: {
@@ -156,7 +156,7 @@ const customTheme: DropdownTheme = {
 Or use the `useDropdownTheme` hook:
 
 ```tsx
-import { useDropdownTheme } from 'react-native-dropdown-selector';
+import { useDropdownTheme } from 'rn-dropdown-select';
 
 const theme = useDropdownTheme({ mode: 'dark' });
 ```
@@ -179,7 +179,7 @@ import { Ionicons } from '@expo/vector-icons';
 For advanced use cases, you can use the sub-components directly:
 
 ```tsx
-import { OptionsList, SelectorItem } from 'react-native-dropdown-selector';
+import { OptionsList, SelectorItem } from 'rn-dropdown-select';
 ```
 
 ## Requirements

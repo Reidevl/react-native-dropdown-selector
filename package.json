@@ -1,5 +1,5 @@
 {
-  "name": "react-native-dropdown-selector",
+  "name": "rn-dropdown-select",
   "version": "1.0.0",
   "description": "A lightweight, customizable dropdown selector component for React Native without external UI library dependencies",
   "main": "dist/index.js",
@@ -34,6 +34,7 @@
   },
   "files": [
     "dist",
+    "src",
     "README.md",
     "LICENSE"
   ]
